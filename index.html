@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GDG GU DevConnect 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="One-page event website for an upcoming GDG GU event with registration, countdown, highlights, schedule and more."
+  />
+
+  <!-- Google Font (Optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="brand-logo">GDG</div>
+        <div class="brand-text">
+          <span>GDG GU</span>
+          <span>DevConnect 2025</span>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <span class="pill">On-campus • Limited seats</span>
+        <button class="theme-toggle" id="theme-toggle" type="button">
+          <span id="theme-icon">🌙</span>
+          <span id="theme-label">Dark mode</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-text">
+        <h1>
+          Build, Ship &amp; Grow with <span>GDG Galgotias</span>
+        </h1>
+        <p class="hero-tagline">
+          A one-day hands-on event for developers, designers, and tech
+          enthusiasts to explore Google technologies, network with mentors, and
+          build real-world projects.
+        </p>
+
+        <div class="hero-meta">
+          <div class="chip">
+            📍 <strong>Galgotias University</strong> • Greater Noida
+          </div>
+          <div class="chip">
+            📅 15 March 2025 • <strong>10:00 AM – 4:30 PM</strong>
+          </div>
+          <div class="chip">
+            🎟️ <strong>Free entry</strong> • Registration mandatory
+          </div>
+        </div>
+
+        <!-- Countdown -->
+        <div class="countdown" id="countdown">
+          <span class="countdown-label">Event starts in:</span>
+          <div class="time-pill">
+            <span id="days">0</span><span>Days</span>
+          </div>
+          <div class="time-pill">
+            <span id="hours">0</span><span>Hours</span>
+          </div>
+          <div class="time-pill">
+            <span id="minutes">0</span><span>Min</span>
+          </div>
+          <div class="time-pill">
+            <span id="seconds">0</span><span>Sec</span>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <button class="btn-primary" type="button" onclick="scrollToSection('register')">
+            Register now <span>→</span>
+          </button>
+          <button class="btn-outline" type="button" onclick="scrollToSection('schedule')">
+            View schedule
+          </button>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Event snapshot">
+        <div class="hero-badge">
+          <span>✨</span> Powered by Google Developer Groups
+        </div>
+        <div class="sessions-mini">
+          <div class="session-row">
+            <div class="session-row-left">
+              <h4>Keynote: Future of Web</h4>
+              <span>Modern Web, AI, and Cloud</span>
+            </div>
+            <span class="session-time">10:00 AM</span>
+          </div>
+          <div class="session-row">
+            <div class="session-row-left">
+              <h4>Build with Firebase</h4>
+              <span>Hands-on live coding</span>
+            </div>
+            <span class="session-time">12:30 PM</span>
+          </div>
+          <div class="session-row">
+            <div class="session-row-left">
+              <h4>Career AMA</h4>
+              <span>Ask your tech & career doubts</span>
+            </div>
+            <span class="session-time">3:15 PM</span>
+          </div>
+        </div>
+        <div class="hero-footer">
+          <div class="avatars">
+            <div class="avatar-dot"></div>
+            <span><strong>120+</strong> already registered</span>
+          </div>
+          <span>Certificate + swags for active participants 🎁</span>
+        </div>
+      </aside>
+    </section>
+
+    <!-- HIGHLIGHTS + REGISTRATION -->
+    <section class="main-grid">
+      <!-- Event Highlights -->
+      <section aria-labelledby="highlights-heading">
+        <h2 id="highlights-heading">Event Highlights</h2>
+        <p class="section-subtitle">
+          Carefully curated sessions designed to give you maximum value in one day.
+        </p>
+
+        <div class="highlight-cards">
+          <article class="card">
+            <span class="card-tag">Track 01 • Web & Cloud</span>
+            <h3 class="card-title">From idea to deploy in one day</h3>
+            <p class="card-body">
+              Learn how to architect, build, and deploy modern web apps using
+              technologies like Firebase, Cloud Run, and modern frontend tools.
+            </p>
+            <span class="card-meta">Live demos • Best practices • DevOps tips</span>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Track 02 • Android & Flutter</span>
+            <h3 class="card-title">Build delightful mobile experiences</h3>
+            <p class="card-body">
+              Hands-on crash course on building fast, beautiful Android and
+              cross-platform apps using Android Studio and Flutter.
+            </p>
+            <span class="card-meta">Beginner-friendly • Code labs • Mentors on floor</span>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Track 03 • Community & Careers</span>
+            <h3 class="card-title">Grow with the developer ecosystem</h3>
+            <p class="card-body">
+              Learn how to leverage GDG, GDSC, and open-source communities to
+              level up your skills, network, and career opportunities.
+            </p>
+            <span class="card-meta">Panel discussion • AMA • Networking</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- Registration Form -->
+      <section class="form-card" id="register" aria-labelledby="register-heading">
+        <h3 id="register-heading">Register for GDG GU DevConnect</h3>
+        <p>
+          Seats are limited. Fill in your details to confirm your spot. We’ll send
+          all event updates to your email.
+        </p>
+
+        <form id="registration-form">
+          <div class="field-group">
+            <label for="name">Full Name*</label>
+            <input id="name" name="name" type="text" placeholder="e.g. Daksh Pratap Singh" required />
+          </div>
+
+          <div class="field-group">
+            <label for="email">Email*</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+
+          <div class="form-row-two">
+            <div class="field-group">
+              <label for="college">College / Organization*</label>
+              <input id="college" name="college" type="text" placeholder="e.g. Galgotias University" required />
+            </div>
+            <div class="field-group">
+              <label for="interest">Primary Interest Area*</label>
+              <select id="interest" name="interest" required>
+                <option value="">Select one</option>
+                <option>Web Development</option>
+                <option>Android / Mobile</option>
+                <option>Cloud & DevOps</option>
+                <option>ML / AI</option>
+                <option>Design / UI-UX</option>
+                <option>Open Source & Community</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="notes">What do you expect from this event? (Optional)</label>
+            <textarea id="notes" name="notes" placeholder="Tell us what you'd like to learn or build..."></textarea>
+          </div>
+
+          <div class="form-footer">
+            <button class="btn-primary" type="submit">
+              Submit registration <span>🚀</span>
+            </button>
+            <span>By registering, you agree to receive event-related emails.</span>
+          </div>
+
+          <p id="success-message" class="success-message">
+            ✅ Registration successful! Check your inbox for a confirmation mail (simulation).
+          </p>
+        </form>
+      </section>
+    </section>
+
+    <!-- SCHEDULE + LOCATION -->
+    <section class="bottom-grid">
+      <!-- Schedule -->
+      <section aria-labelledby="schedule-heading" id="schedule">
+        <h2 id="schedule-heading">Event Schedule</h2>
+        <p class="section-subtitle">
+          A focused day broken into short, high-impact sessions.
+        </p>
+
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Session</th>
+              <th>Speaker / Track</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10:00 – 10:30 AM</td>
+              <td>Welcome + Keynote: The Future of Web & AI</td>
+              <td>GDG Lead & Guest Speaker</td>
+            </tr>
+            <tr>
+              <td>10:30 – 12:00 PM</td>
+              <td>Hands-on: Build your first full-stack web app</td>
+              <td>Web & Cloud Track</td>
+            </tr>
+            <tr>
+              <td>12:00 – 12:30 PM</td>
+              <td>Networking + Tea Break</td>
+              <td>Community</td>
+            </tr>
+            <tr>
+              <td>12:30 – 2:00 PM</td>
+              <td>Android & Flutter: From UI to Play Store</td>
+              <td>Mobile Track</td>
+            </tr>
+            <tr>
+              <td>2:00 – 2:30 PM</td>
+              <td>Lunch + Project showcase</td>
+              <td>All tracks</td>
+            </tr>
+            <tr>
+              <td>2:30 – 3:15 PM</td>
+              <td>Panel: Cracking internships & early careers</td>
+              <td>Industry Panel</td>
+            </tr>
+            <tr>
+              <td>3:15 – 4:00 PM</td>
+              <td>AMA with speakers + Q&A</td>
+              <td>Community & Careers</td>
+            </tr>
+            <tr>
+              <td>4:00 – 4:30 PM</td>
+              <td>Closing note, feedback & group photo</td>
+              <td>GDG GU</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Location + Socials -->
+      <section class="location-card" aria-labelledby="location-heading">
+        <h3 id="location-heading">Location & Community</h3>
+        <p>
+          The event will be hosted on-campus at Galgotias University, Greater
+          Noida. Exact hall details will be shared over email after
+          confirmation.
+        </p>
+
+        <div class="map-placeholder" aria-label="Google Maps location placeholder">
+          <!-- Google Maps Embed: you can replace src with your own embed link if needed -->
+          <iframe
+            loading="lazy"
+            allowfullscreen
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3518.126394852333!2d77.49937507547263!3d28.37423207578684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff8bc6f1ab5%3A0x1d559ba41ef04bc5!2sGalgotias%20University!5e0!3m2!1sen!2sin!4v1700200000000"
+            height="200"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <p>Stay connected with GDG Galgotias and never miss an update:</p>
+
+        <div class="socials">
+          <!-- Replace # with actual links to official handles -->
+          <a class="social-link" href="#" target="_blank" rel="noopener">
+            <span>🐦</span> Twitter / X
+          </a>
+          <a class="social-link" href="#" target="_blank" rel="noopener">
+            <span>📸</span> Instagram
+          </a>
+          <a class="social-link" href="#" target="_blank" rel="noopener">
+            <span>💼</span> LinkedIn
+          </a>
+          <a class="social-link" href="#" target="_blank" rel="noopener">
+            <span>▶️</span> YouTube
+          </a>
+        </div>
+      </section>
+    </section>
+
+    <footer>
+      Built for <strong>GDG GU Event Landing Page Task</strong>.
+      Customize content &amp; deploy on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>.
+    </footer>
+  </div>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
