@@ -29,7 +29,7 @@ This is a static 1-page website designed for a hypothetical upcoming **GDG Galgo
 
 - ✅ **Countdown Timer**
   - Live countdown until the mock event date:
-  - `15 March 2025, 10:00 AM` (configurable in `script.js`)
+  - `30 November 2025, 10:00 AM` (configurable in `script.js`)
 
 - ✅ **Event Highlights Section**
   - 3 highlight cards:
