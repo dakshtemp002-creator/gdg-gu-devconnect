@@ -4,8 +4,6 @@ A single-page, responsive event website built for the **GDG GU** event task.
 The page includes registration, countdown, highlights, schedule, location, and social links.
 
 PROJECT REPO LINK-https://github.com/dakshtemp002-creator/gdg-gu-devconnect.git
-LIVE DEMO LINK-dakshtemp002-creator.github.io
-
 ---
 
 ## 💡 Project Overview
